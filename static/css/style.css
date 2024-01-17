@@ -38,3 +38,12 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
+
+.goBackBtn {
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 10px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
