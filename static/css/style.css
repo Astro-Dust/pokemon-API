@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.container {
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.38);
+}
+
+.pokemon-photo {
+    width: 260px;
+}
+
+.pokemon-info {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.pokemon-info > * {
+    font-size: 11px;
+}
+
+.pokemon_number > span {
+    color: rgb(71, 70, 70);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}

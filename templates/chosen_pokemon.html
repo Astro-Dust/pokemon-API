@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ photo }}" class="pokemon-photo">
+        <div class="pokemon-info">
+            <div class="pokemon_number">
+                <span>#{{ pokemon_number }}</span>
+            </div>
+            <div class="specific-info">
+                <h1>{{ name }}</h1>
+                <h3 style="background-color: {{ type_color }}; width: fit-content; padding: 3px 10px">{{ pokemon_type }}</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
