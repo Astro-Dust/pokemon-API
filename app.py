@@ -9,13 +9,16 @@ def home():
 
 @app.route("/search", methods=["POST"])
 def search():
-    name = request.form["name"].capitalize()
-    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{name.lower()}")
-    data = response.json()
-    
-    photo = data["sprites"]["front_default"]
-    pokemon_number = data["id"]
-    pokemon_type = data["types"][0]["type"]["name"].capitalize()
+    try:
+        name = request.form["name"].capitalize()
+        response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{name.lower()}")
+        data = response.json()
+        
+        photo = data["sprites"]["front_default"]
+        pokemon_number = data["id"]
+        pokemon_type = data["types"][0]["type"]["name"].capitalize()
+    except:
+        return "Pokemon not found."
     
     type_color = get_type_color(pokemon_type)
     
@@ -25,7 +28,12 @@ def get_type_color(pokemon_type):
     type_colors = {
         "Normal":"#A8A77A",
         "Fire": "#EE8130",
-        "Water": "#6390F0"
+        "Water": "#6390F0",
+        "Electric": "#FFF833",
+        "Fairy": "F299B4",
+        "Poison": "#B67FDB",
+        "Grass": "#16F251",
+        "Flying": "#9DA19E"
     }
     return type_colors.get(pokemon_type, "#fff")
 
