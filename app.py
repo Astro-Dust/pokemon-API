@@ -30,11 +30,13 @@ def get_type_color(pokemon_type):
         "Fire": "#EE8130",
         "Water": "#6390F0",
         "Electric": "#FFF833",
-        "Fairy": "F299B4",
+        "Fairy": "#F299B4",
         "Poison": "#B67FDB",
         "Grass": "#16F251",
-        "Flying": "#9DA19E"
+        "Flying": "#9DA19E",
+        "Dragon": "#B752FA"
     }
+    # retorna o a cor do tipo do pokemon. Caso não esteja presente, irá ficar com o background branco
     return type_colors.get(pokemon_type, "#fff")
 
 app.run(debug=True, port=8000)
