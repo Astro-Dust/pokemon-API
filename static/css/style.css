@@ -1,42 +1,49 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-body {
-    background-color: #fff;
+* {
+    font-family: "Montserrat", sans-serif;
 }
 
 .container {
-    background-color: rgb(233, 233, 233);
+    background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.38);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
-.pokemon-photo {
-    width: 260px;
+.pokemon {
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.308);
+    border-radius: 8px;
+    padding: 20px 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pokemon-number {
+    margin-left: 140px;
 }
 
 .pokemon-info {
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-
-.pokemon-info > * {
+    border-radius: 80px;
+    padding: 5px 15px;
     font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+    display: block;
 }
 
-.pokemon_number > span {
-    color: rgb(71, 70, 70);
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: bold;
+.pokemon-info {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.657);
 }
 
 .goBackBtn {
@@ -46,4 +53,19 @@ body {
     color: #fff;
     border: none;
     padding: 5px 10px;
+}
+
+.goBackBtn {
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.308);
+    color: black;
+    font-weight: 400;
+    transition: background-color 0.2s ease;
+}
+
+.goBackBtn:hover {
+    background-color: rgb(229, 229, 229);
 }
